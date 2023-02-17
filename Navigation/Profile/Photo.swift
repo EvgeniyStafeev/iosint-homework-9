@@ -2,7 +2,7 @@
 //  Photo.swift
 //  Navigation
 //
-//  Created by Татьяна Новичихина on 20.11.2022.
+//  Created by Евгений Стафеев on 20.11.2022.
 //
 
 import UIKit

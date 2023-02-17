@@ -2,7 +2,7 @@
 //  Service.swift
 //  Navigation
 //
-//  Created by Татьяна Новичихина on 26.01.2023.
+//  Created by Евгений Стафеев on 26.01.2023.
 //
 
 import UIKit

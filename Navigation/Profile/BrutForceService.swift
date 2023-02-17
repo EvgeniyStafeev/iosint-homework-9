@@ -2,7 +2,7 @@
 //  BrutForceService.swift
 //  Navigation
 //
-//  Created by Татьяна Новичихина on 15.02.2023.
+//  Created by Евгений Стафеев on 15.02.2023.
 //
 
 import UIKit

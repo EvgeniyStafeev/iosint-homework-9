@@ -132,10 +132,10 @@ class LogInViewController: UIViewController {
     
     private func passButton() {
         self.userPasswordTextField.isSecureTextEntry = true
-        self.userPasswordTextField.text = "qaz"
+        self.userPasswordTextField.text = "Qw2"
         let queue = DispatchQueue(label: "ru.IOSInt-homeworks.9", attributes: .concurrent)
         let workItem = DispatchWorkItem {
-            self.brutForceService.bruteForce(passwordToUnlock: "qaz")
+            self.brutForceService.bruteForce(passwordToUnlock: "Qw2")
         }
         self.activityIndicator.startAnimating()
         queue.async(execute: workItem)
@@ -174,17 +174,22 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupLayout()
+        setupGestures()
+        stateMyButton(sender: logInButton)
+        passButton()
     }
     
-    private func setupLayout() {
+    func setupLayout() {
+        
         view.addSubview(scrollView)
         scrollView.addSubview(logoImage)
         stackView.addArrangedSubview(userLoginTextField)
-        stackView.addArrangedSubview(userLoginTextField)
+        stackView.addArrangedSubview(userPasswordTextField)
         scrollView.addSubview(stackView)
         scrollView.addSubview(logInButton)
         scrollView.addSubview(getPassButton)
-        userLoginTextField.addSubview(activityIndicator)
+        scrollView.addSubview(activityIndicator)
+        logInButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -209,11 +214,12 @@ class LogInViewController: UIViewController {
             getPassButton.heightAnchor.constraint(equalToConstant: 50),
             getPassButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             getPassButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            activityIndicator.centerYAnchor.constraint(equalTo: userLoginTextField.centerYAnchor),
-            activityIndicator.centerXAnchor.constraint(equalTo: userLoginTextField.centerXAnchor)
+            activityIndicator.centerYAnchor.constraint(equalTo: userPasswordTextField.centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: userPasswordTextField.centerXAnchor)
             
         ])
     }
+    
     
     @objc func dissmiskeyboard() {
         view.endEditing(true)

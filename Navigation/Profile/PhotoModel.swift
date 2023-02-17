@@ -2,7 +2,7 @@
 //  PhotoModel.swift
 //  Navigation
 //
-//  Created by Татьяна Новичихина on 02.02.2023.
+//  Created by Евгений Стафеев on 02.02.2023.
 //
 
 import UIKit

@@ -11,7 +11,7 @@ import UIKit
 final class Checker {
 
     private let login = "1111"
-    private let password = "2222"
+    private let password = "Qw2"
 
 
     static let shared = Checker()

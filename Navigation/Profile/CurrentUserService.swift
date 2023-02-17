@@ -8,7 +8,7 @@
 import UIKit
 
 class CurrentUserService: UserProtocol {
-    var userNew: User = User(login: "1111", password: "2222", fullName: "Evgeny Stafeev", statusLabel: "Учусь в Нетологии", avatar: (UIImage(named: "Фото11")!))
+    var userNew: User = User(login: "1111", password: "Qw2", fullName: "Evgeny Stafeev", statusLabel: "Учусь в Нетологии", avatar: (UIImage(named: "Фото11")!))
     
     func logIn(login: String, password: String) -> User? {
         if login == userNew.login && password == userNew.password {
